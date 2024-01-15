@@ -8,14 +8,14 @@
 public class GameOfLife {
 
 	public static void main(String[] args) {
-		String fileName = args[0];
+		//String fileName = args[0];
 		//// Uncomment the test that you want to execute, and re-compile.
 		//// (Run one test at a time).
 		//// test1(fileName);
 		//// test2(fileName);
 		//// test3(fileName, 3);
 		//// play(fileName);
-		//test1("line.dat");
+		test1("line.dat");
 		//test2("line.dat");
 		//play("pulsar.dat");
 
@@ -75,11 +75,11 @@ public class GameOfLife {
 		int rows = Integer.parseInt(in.readLine());
 		int cols = Integer.parseInt(in.readLine());
 		int[][] board = new int[rows][cols];
-		for (int i = 1; i < (board.length - 1); i++) {
+		for (int i = 0; i < (board.length - 1); i++) {
 			String line = in.readLine();
-			for (int j = 1; j < line.length(); j++) {
+			for (int j = 0; j < line.length(); j++) {
 				if (line.charAt(j) == 'x')
-					board[i][j+1] = 1;
+					board[i][j] = 1;
 			}
 		}
 		return board;
