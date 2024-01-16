@@ -77,9 +77,9 @@ public class GameOfLife {
 		int[][] board = new int[rows+2][cols+2];
 		for (int i = 1; i < (board.length - 1); i++) {
 			String line = in.readLine();
-			for (int j = 1; j < line.length(); j++) {
+			for (int j = 0; j < line.length(); j++) {
 				if (line.charAt(j) == 'x')
-					board[i][j] = 1;
+					board[i][j+1] = 1;
 			}
 		}
 		return board;
